@@ -1,9 +1,15 @@
-import domain.Race;
+import domain.*;
+
+import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
+        CarNames carNames = InputHandler.getCarNames();
+        Rounds rounds = InputHandler.getRounds();
+        List<Car> cars = carNames.generateCarsWithCarNames();
+        rounds.start(cars);
 
-        for(int i = 0; i< 10; i++)
-            System.out.println(Race.getRandomNumber(0,8,4));
+        System.out.println(Champion.getPositionSet(cars));
+
     }
 }

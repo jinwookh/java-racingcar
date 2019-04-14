@@ -13,8 +13,7 @@ public class CarNames {
         int count =  countValidNames(input);
 
         if ( count == 0 ) {
-            throw new IllegalArgumentException("쉼표로 구분된 차 이름들을 입력해 주세요. " +
-                    "차 이름은 영문 또는 숫자 혼합이어야 합니다.");
+            throw new IllegalArgumentException();
         }
         this.names = convertInputToNames(input);
     }
@@ -32,7 +31,7 @@ public class CarNames {
         List<String> names = new ArrayList<>();
         for (String string : input.split(SEPARATOR)) {
             if (checkValidity(string.trim())) {
-                names.add(string);
+                names.add(string.trim());
             }
         }
 

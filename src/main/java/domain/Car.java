@@ -22,6 +22,9 @@ public class Car {
         position++;
     }
 
+    public int positionIs() {
+        return position;
+    }
 
     public String postitionToString() {
         String string = name + BETWEEN_DASH_AND_NAME;

@@ -3,7 +3,7 @@ package domain;
 import java.util.List;
 
 public class Rounds {
-    private static String RESULT_IS = "실행 결과";
+    private static String RESULT_IS = "\n실행 결과";
 
     private int rounds;
 
@@ -34,6 +34,7 @@ public class Rounds {
              ) {
             System.out.println(car.postitionToString());
         }
+        System.out.println();
     }
 
 
