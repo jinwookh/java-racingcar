@@ -19,6 +19,7 @@ public class Race {
         }
         return false;
     }
+
     public static void doRace(List<Car> cars) {
         for ( Car car : cars
              ) {

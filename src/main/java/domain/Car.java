@@ -1,6 +1,7 @@
 package domain;
 
 public class Car {
+    private final String DASH = "-";
     private final String name;
     private int position = 0;
 
@@ -20,5 +21,13 @@ public class Car {
         position++;
     }
 
+
+    public String postitionToString() {
+        String string = "";
+        for (int i = 0; i < position; i++ ) {
+            string += DASH;
+        }
+        return string;
+    }
     // 추가 기능 구현
 }

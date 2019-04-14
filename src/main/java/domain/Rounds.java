@@ -1,6 +1,7 @@
 package domain;
 
 public class Rounds {
+
     private int number;
 
     public Rounds(String input) {
@@ -16,6 +17,8 @@ public class Rounds {
         int rounds = Integer.parseInt(input);
         return rounds > 0;
     }
+
+
 
 
 }
