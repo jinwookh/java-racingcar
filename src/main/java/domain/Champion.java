@@ -5,9 +5,25 @@ import java.util.*;
 public class Champion {
     List<Car> champions;
 
-    Champion(List<Car> cars) {
+    public Champion(List<Car> cars) {
+        champions = getChampion(cars);
+        for (Car car: champions
+             ) {
+            System.out.println(car);
+        }
 
+    }
 
+    private List<Car> getChampion(List<Car> cars) {
+        List<Car> champions = new ArrayList<>();
+        int championPosition = getMaxFromPositionList(getPositionList(cars));
+        for (Car car : cars
+             ) {
+            if(car.positionIs() == championPosition) {
+                champions.add(car);
+            }
+        }
+        return champions;
     }
 
 
@@ -27,7 +43,7 @@ public class Champion {
                     " in position set.");
         }
         Collections.sort(positionList);
-        return positionList.get(0);
+        return positionList.get(positionList.size() - 1);
     }
 
 
