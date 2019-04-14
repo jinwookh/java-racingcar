@@ -10,5 +10,11 @@ public class Car {
 
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
+
     // 추가 기능 구현
 }

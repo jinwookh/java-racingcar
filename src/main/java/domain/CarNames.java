@@ -20,6 +20,15 @@ public class CarNames {
 
     }
 
+    public List<Car> generateCarsWithCarNames() {
+        List<Car> cars = new ArrayList<>();
+        for (String name : names
+             ) {
+            cars.add(new Car(name));
+        }
+        return cars;
+    }
+
     private List<String> convertInputToNames(String input) {
         List<String> names = new ArrayList<>();
         for (String string : input.split(SEPARATOR)) {
