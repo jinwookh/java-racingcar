@@ -20,6 +20,7 @@ public class Rounds {
         for (int i = 0; i < rounds; i++) {
             Race.start(cars);
             show(cars);
+            System.out.println();
         }
     }
 

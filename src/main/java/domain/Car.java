@@ -33,5 +33,5 @@ public class Car {
         }
         return string;
     }
-    // 추가 기능 구현
+
 }

@@ -1,6 +1,5 @@
 package domain;
 
-import javax.swing.*;
 import java.util.*;
 
 public class Champion {
@@ -10,10 +9,6 @@ public class Champion {
 
     public Champion(List<Car> cars) {
         champions = getChampion(cars);
-        for (Car car: champions
-             ) {
-            System.out.println(car);
-        }
 
     }
 
