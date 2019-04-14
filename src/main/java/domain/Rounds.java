@@ -16,4 +16,10 @@ public class Rounds {
         int rounds = Integer.parseInt(input);
         return rounds > 0;
     }
+
+    static int getRandomNumber(int bottom, int top, int boundary) {
+        int randomNumber = (int)(Math.random() * (top -  bottom + 1) + bottom);
+
+        return randomNumber;
+    }
 }
