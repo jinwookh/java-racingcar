@@ -1,8 +1,6 @@
 package domain;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Champion {
     List<Car> champions;
@@ -13,13 +11,23 @@ public class Champion {
     }
 
 
-    public static Set<Integer> getPositionSet(List<Car> cars) {
-        Set<Integer> positionSet = new HashSet<>();
+    public static List<Integer> getPositionList(List<Car> cars) {
+        List<Integer> positionList = new ArrayList<>();
         for (Car car : cars
              ) {
-            positionSet.add(car.positionIs());
+            positionList.add(car.positionIs());
         }
-        return positionSet;
+        return positionList;
+    }
+
+
+    public static int getMaxFromPositionList(List<Integer> positionList) {
+        if (positionList.size() == 0) {
+            throw new IllegalStateException("There need to be at least 1 element" +
+                    " in position set.");
+        }
+        Collections.sort(positionList);
+        return positionList.get(0);
     }
 
 
