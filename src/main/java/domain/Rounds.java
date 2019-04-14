@@ -5,14 +5,22 @@ import java.util.List;
 public class Rounds {
     private static String RESULT_IS = "실행 결과";
 
-    private int number;
+    private int rounds;
 
     public Rounds(String input) {
         input = input.trim();
         if(checkValidity(input) == false) {
             throw new IllegalArgumentException();
         }
-        number = Integer.parseInt(input);
+        rounds = Integer.parseInt(input);
+    }
+
+    public void start(List<Car> cars) {
+        System.out.println(RESULT_IS);
+        for (int i = 0; i < rounds; i++) {
+            Race.start(cars);
+            show(cars);
+        }
     }
 
 

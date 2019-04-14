@@ -20,7 +20,7 @@ public class Race {
         return false;
     }
 
-    public static void doRace(List<Car> cars) {
+    public static void start(List<Car> cars) {
         for ( Car car : cars
              ) {
             if(go(getRandomNumber())) {
