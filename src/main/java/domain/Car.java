@@ -16,5 +16,9 @@ public class Car {
     }
 
 
+    public void move() {
+        position++;
+    }
+
     // 추가 기능 구현
 }
