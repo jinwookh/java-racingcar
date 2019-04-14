@@ -1,6 +1,9 @@
 package domain;
 
+import java.util.List;
+
 public class Rounds {
+    private static String RESULT_IS = "실행 결과";
 
     private int number;
 
@@ -18,7 +21,12 @@ public class Rounds {
         return rounds > 0;
     }
 
-
+    private void show(List<Car> cars) {
+        for (Car car : cars
+             ) {
+            System.out.println(car.postitionToString());
+        }
+    }
 
 
 }

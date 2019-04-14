@@ -2,6 +2,7 @@ package domain;
 
 public class Car {
     private final String DASH = "-";
+    private final String BETWEEN_DASH_AND_NAME = ":";
     private final String name;
     private int position = 0;
 
@@ -23,7 +24,7 @@ public class Car {
 
 
     public String postitionToString() {
-        String string = "";
+        String string = name + BETWEEN_DASH_AND_NAME;
         for (int i = 0; i < position; i++ ) {
             string += DASH;
         }
