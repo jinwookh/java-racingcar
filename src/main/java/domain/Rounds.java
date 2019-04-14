@@ -1,13 +1,14 @@
 package domain;
 
 public class Rounds {
-    private int rounds;
+    private int number;
 
-    Rounds(String input) {
+    public Rounds(String input) {
+        input = input.trim();
         if(checkValidity(input) == false) {
             throw new IllegalArgumentException();
         }
-        rounds = Integer.parseInt(input);
+        number = Integer.parseInt(input);
     }
 
 

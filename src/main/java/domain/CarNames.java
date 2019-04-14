@@ -17,7 +17,6 @@ public class CarNames {
                     "차 이름은 영문 또는 숫자 혼합이어야 합니다.");
         }
         this.names = convertInputToNames(input);
-
     }
 
     public List<Car> generateCarsWithCarNames() {
